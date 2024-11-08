@@ -41,6 +41,22 @@ git submodule update --init --recursive
 git submodule update --remote
 ```
 
+## Prod
+
+1. Clonar el repositorio
+2. Crear un .env basado en el .env.template
+3. Ejecutar el comando
+
+```
+docker compose -f docker-compose.prod.yml build
+```
+
+## Ejemplo para construir version de prod
+
+```
+docker build -f dockerfile.prod -t cliente-gateway .
+```
+
 ## Importante
 
 Si se trabaja en el repositorio que tiene los sub-módulos, **primero actualizar y hacer push** en el sub-módulo y **después** en el repositorio principal.
